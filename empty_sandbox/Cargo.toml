@@ -1,0 +1,7 @@
+[package]
+name = "empty_sandbox"
+version = "0.1.0"
+keywords = ["unsafe", "in-process", "intel-mpk"]
+authors = ["Merve Gülmez, merve.gulmez@kuleuven.be"]
+homepage = "https://secure-rewind-and-discard.github.io/"
+

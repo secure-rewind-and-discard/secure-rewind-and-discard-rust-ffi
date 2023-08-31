@@ -1,0 +1,25 @@
+[package]
+name = "png"
+version = "0.1.0"
+edition = "2021"
+keywords = ["unsafe", "in-process", "intel-mpk"]
+authors = ["Merve Gülmez, merve.gulmez@kuleuven.be"]
+homepage = "https://secure-rewind-and-discard.github.io/"
+build = "build.rs"
+
+[dependencies]
+sdradrustffi = { git = "https://github.com/secure-rewind-and-discard/sdradrustffi.git", optional = true}
+sandcrust = { git = "https://github.com/atopia/sandcrust", features = ["custom_vec"], optional = true}
+empty_sandbox = { path = "../empty_sandbox", optional = true}
+libc = "*"
+lazy_static = "*"
+
+
+[features]
+sdradrustffi = ["dep:sdradrustffi"]
+sandcrust = ["dep:sandcrust"]
+empty_sandbox = ["dep:empty_sandbox"]
+bincode_v1 = ["sdradrustffi/bincode_v1"]
+bincode_v2 = ["sdradrustffi/bincode_v2"]
+abomonation_v1 = ["sdradrustffi/abomonation_v1"]
+abomonation_v2 = ["sdradrustffi/abomonation_v2"]
