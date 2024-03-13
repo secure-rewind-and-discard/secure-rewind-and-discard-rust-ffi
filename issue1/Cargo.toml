@@ -10,7 +10,7 @@ homepage = "https://secure-rewind-and-discard.github.io/"
 
 [dependencies]
 libc = "*"
-sdradrustffi = { git = "https://github.com/EricssonResearch/sdradrustffi.git", branch = "testsubmodule", optional = true}
+sdradrustffi = { git = "https://github.com/EricssonResearch/sdradrustffi.git", optional = true}
 
 
 [features]
