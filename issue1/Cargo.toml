@@ -1,0 +1,21 @@
+[package]
+name = "try"
+version = "0.1.0"
+edition = "2021"
+license = "BSD-3"
+keywords = ["unsafe", "in-process", "intel-mpk"]
+authors = ["Merve Gülmez, merve.gulmez@kuleuven.be"]
+homepage = "https://secure-rewind-and-discard.github.io/"
+
+
+[dependencies]
+libc = "*"
+sdradrustffi = { git = "https://github.com/EricssonResearch/sdradrustffi.git", branch = "testsubmodule", optional = true}
+
+
+[features]
+sdradrustffi = ["dep:sdradrustffi"]
+bincode_v1 = ["sdradrustffi/bincode_v1"]
+bincode_v2 = ["sdradrustffi/bincode_v2"]
+abomonation_v1 = ["sdradrustffi/abomonation_v1"]
+abomonation_v2 = ["sdradrustffi/abomonation_v2"]
