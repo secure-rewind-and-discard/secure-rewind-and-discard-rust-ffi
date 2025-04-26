@@ -13,8 +13,8 @@ sdradrustffi = { git = "https://github.com/secure-rewind-and-discard/sdradrustff
 sandcrust = { git = "https://github.com/atopia/sandcrust", features = ["custom_vec"], optional = true}
 empty_sandbox = { path = "../empty_sandbox", optional = true}
 libc = "*"
-rand = "*"
-rand_pcg = "*"
+rand = "0.8"
+rand_pcg = "0.3"
 
 
 [features]

@@ -7,9 +7,9 @@
 
 #![feature(allocator_api)]
 use libc::{c_int, c_void, clock_gettime, size_t, timespec, CLOCK_MONOTONIC};
-use rand::distributions::Uniform;
-use rand::Rng;
 use rand_pcg::Lcg64Xsh32;
+use rand::distributions::{Uniform, Distribution};
+
 
 
 #[cfg(feature = "sdradrustffi")]
@@ -149,7 +149,7 @@ fn main() {
             let mut rng = Lcg64Xsh32::new(STATE, STREAM);
 
             let range = Uniform::new(0, 255);
-            let buf: Vec<u8> = (0..numbers[i]).map(|_| rng.sample(&range)).collect();
+            let buf: Vec<u8> = (0..numbers[i]).map(|_| range.sample(&mut rng)).collect();
             start_time = get_time();
             let c: &[u8] = &black_box(compress(black_box(&buf)));
             end_time = get_time();

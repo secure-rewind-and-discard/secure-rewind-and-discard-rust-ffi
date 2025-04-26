@@ -21,6 +21,7 @@ git clone https://github.com/secure-rewind-and-discard/secure-rewind-and-discard
 ### Benchmarks
 The [benchmark_scripts](./benchmark_scripts/) folder contains the related benchmarking scripts. All benchmark data will be located under [log](./log) folder.  Here's an overview of the available scripts:
 
+- [install.sh](./install.sh) installs the dependency
 - [bench_all.sh](./benchmark_scripts/bench_all.sh) runs all following benchmarks
     - [micro_benchmark.sh](./benchmark_scripts/micro_benchmark.sh) reproduces Figure 2. 
     - [malloc_benchmark.sh](./benchmark_scripts/malloc_benchmark.sh) reproduces Section V-A result. 
